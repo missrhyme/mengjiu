@@ -1,0 +1,32 @@
+/*switch*/
+.ui-switch{
+	display: inline-block;
+	vertical-align: middle;
+	width: 50px;
+	height: 20px;
+	border-radius: 16px;
+	background-color: #dcdcdc;
+	position: relative;
+	transition: 200ms background-color ease-in;
+	-webkit-transition: 200ms background-color ease-in;
+}
+.ui-switch:before{
+	content: '';
+	display: inline-block;
+	width: 25px;
+	height: 25px;
+	border-radius: 25px;
+	border: 1px solid #ccc;
+	background-color: #fff;
+	position: absolute;
+	left: 0px;
+	top: -4px;
+	transition: 200ms left ease-in;
+	-webkit-transition: 200ms left ease-in;
+}
+.ui-switch.active{
+	background-color: #23d1c5;
+}
+.ui-switch.active:before{
+	left: 24px;
+}

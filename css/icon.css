@@ -1,0 +1,144 @@
+@font-face {
+  font-family: 'iconfont';
+  src:    url('../font/iconfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+          url('../font/iconfont.svg#iconfont') format('svg'); /* Legacy iOS */
+}
+
+.iconfont{
+  font-style: normal;
+  font-family: 'iconfont';
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.icon-chat-solid:before{
+	color: #fff;
+	content:'\E002';
+}
+.icon-chat:before{
+	content:'\E001';
+	font-size: 2rem;
+}
+.active .icon-chat:before{
+	color: #0080ff;
+	content:'\E002';
+}
+.icon-customer:before{
+	content:'\E003';
+	font-size: 2rem;
+}
+.active .icon-customer:before{
+	color: #0080ff;
+	content:'\E004';
+}
+.icon-discover:before{
+	content:'\E005';
+	font-size: 2rem;
+}
+.active .icon-discover:before{
+	color: #0080ff;
+	content:'\E006';
+}
+.icon-user:before{
+	content:'\E007';
+	font-size: 2rem;
+}
+.active .icon-user:before{
+	color: #0080ff;
+	content:'\E008';
+}
+.icon-addcustomer:before{
+	content: '\E009';
+	font-size: 2rem;
+}
+.icon-bus:before{
+	content: '\E010';
+}
+.icon-close:before{
+	content: '\E011';
+}
+.icon-add:before{
+	content: '\E012';
+}
+.icon-good:before{
+	content: '\E013';
+}
+.icon-houseType:before{
+	content: '\E014';
+}
+.icon-time:before{
+	content: '\E015';
+}
+.icon-message:before{
+	content: '\E016';
+}
+.icon-more:before{
+	content: '\E017';
+	font-size: 2rem;
+}
+.icon-next:before{
+	color: #999;
+	font-size: 1.2rem;
+	content: '\E018';
+}
+.icon-prev:before{
+	font-size: 2rem;
+	content: '\E019';
+}
+.icon-quick:before{
+	content: '\E020';
+}
+.icon-round:before{
+	content: '\E021';
+}
+.icon-start:before{
+	content: '\E022';
+}
+.icon-stop:before{
+	content: '\E023';
+}
+.icon-tag:before{
+	content: '\E024';
+}
+.icon-tel:before{
+	content: '\E025';
+}
+.icon-tick:before{
+	content: '\E026';
+}
+.icon-tick-active:before{
+	content: '\E027';
+}
+.icon-mobile:before{
+	content: '\E028';
+}
+.icon-lock:before{
+	content: '\E029';
+}
+.icon-hint:before{
+	content: '\E030';
+}
+.icon-robcustomer{
+	background: #ff6263;
+	width: 35px;
+	height: 35px;
+	border-radius: 10px;
+	color: #fff;
+}
+.icon-robcustomer:before{
+	content: '\E007';
+	font-size: 2rem;
+}
+
+.icon-notebubble{
+	color: #fff;
+	padding: 0 5px;
+	height: 17px;
+	font-size: 13px;
+	line-height: 17px;
+	border-radius: 9px;
+	text-align: center;
+	display: inline-block;
+	vertical-align: middle;
+	background-color: #F73226;
+}

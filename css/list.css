@@ -1,0 +1,40 @@
+.activity-list{
+  /*border-top: 1px solid #e8e8e8;*/
+}
+.activity-list>li{
+  /*width: calc( 50% - 10px );*/
+  background: #fff;
+  margin: 10px 0;
+}
+.activity-list>li .title-wrap{
+  height: 50px;
+  line-height: 50px;
+  position: relative;
+}
+.title-wrap i{
+  position: absolute;
+  right: 10px;
+  top: 0;
+}
+.activity-list>li .title{
+  display: inline-block;
+  padding-left: 50px;
+  width: 60%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 1.4rem;
+}
+
+.activity-list>li p{
+  padding-left: 22px;
+  line-height: 20px;
+  font-size: 1.2rem;
+}
+.activity-item-option{
+  border-top: 1px solid #e8e8e8;
+  padding: 5px 0;
+}
+.activity-item-option .iconfont{
+  margin: 0 15px 4px 0;
+}

@@ -1,0 +1,52 @@
+.detail-title{
+  text-align: center;
+  padding: 20px 30px;
+  background: #fff;
+}
+.detail-title>h2{
+  font-size: 1.8rem;
+}
+.detail-title>p{
+  color: #666;
+  margin-top: 20px;
+}
+.detail-info{
+  background: #fff;
+  margin: 5px 0;
+  padding: 8px 0 8px 30px;
+}
+.detail-info>p{
+  line-height: 30px;
+}
+.detail-info i{
+  margin-right: 20px;
+  color: #0080ff;
+}
+.detail-intro{
+  background: #fff;
+  padding: 5px 30px;
+  margin-bottom: 50px;
+}
+.detail-intro>h3{
+  color: #0080ff;
+  margin: 5px 0;
+}
+.detail-intro>p{
+  text-indent: 2.4rem;
+  line-height: 2rem;
+}
+.detail-collectButton{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #0080ff;
+  color: #fff;
+  left: 0;
+  border: 0;
+  height: 45px;
+  line-height: 45px;
+  font-size: 1.6rem;
+}
+.detail-collectButton:active{
+  background: #0165C7;
+}

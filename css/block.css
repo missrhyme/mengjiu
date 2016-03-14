@@ -1,0 +1,28 @@
+/*linebox*/
+.blocks {
+    margin-top: 14px;
+    background-color: #fff;
+}
+.blocks>li{
+    height: 60px;
+    color: #333;
+    font-size: 1.5rem;
+    line-height: 60px;
+    position: relative;
+    padding-left: 10px;
+}
+.blocks>li:active{
+    background-color: #f1f1f1;
+}
+.blocks>li p{
+    overflow: hidden;
+    border-bottom: 1px solid #ccc;
+}
+.blocks>li:last-child p {
+    border-style: none;
+}
+.blocks>li .icon-next {
+    height: 45px;
+    float: right;
+    margin-right: 10px;
+}
