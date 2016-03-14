@@ -21,6 +21,7 @@ export class Tab extends Component{
 			<Link
 				activeClassName='current'
 			  to={this.props.to}
+				onClick={this.props.onClick}
 			>
 				{this.props.title}
 			</Link>

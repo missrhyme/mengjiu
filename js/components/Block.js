@@ -18,9 +18,11 @@ export class Block extends Component{
 	}
 
 	render(){
+		const { iconClass } = this.props;
 		return(
       <li>
       	<Link to={this.props.link}>
+				<b className={`iconfont ${iconClass}`} />
         <p>
           <span>{this.props.title}</span>
           <i className="iconfont icon-next"></i>

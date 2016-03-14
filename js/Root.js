@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Router, Route, Link, hashHistory } from 'react-router'
 
 import HomeBox from './pages/HomeBox'
+import List from './pages/ActivityList'
 import SchoolActivity from './pages/SchoolActivity'
 import Discover from './pages/Discover'
 import ActivityDetail from './pages/ActivityDetail'
@@ -14,6 +15,7 @@ export default class Root extends Component {
 				<Route component={HomeBox} >
 					<Route path="/" component={SchoolActivity} />
 				</Route>
+				<Route path="/list/:type" component={List} />
 				<Route path="/activity/:id" component={ActivityDetail} />
 				<Route path="/discover" component={Discover} />
 				<Route path="/user" component={User} />

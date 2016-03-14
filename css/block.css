@@ -4,19 +4,33 @@
     background-color: #fff;
 }
 .blocks>li{
-    height: 60px;
+    height: 50px;
     color: #333;
     font-size: 1.5rem;
-    line-height: 60px;
+    line-height: 50px;
     position: relative;
-    padding-left: 10px;
+    padding-left: 45px;
 }
 .blocks>li:active{
     background-color: #f1f1f1;
 }
+.blocks>li b{
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
+  text-align: center;
+  display: inline-block;
+  position: absolute;
+  left: 10px;
+  top: 12px;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 1.4rem;
+  font-weight: normal;
+}
 .blocks>li p{
     overflow: hidden;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid #e0e0e0;
 }
 .blocks>li:last-child p {
     border-style: none;

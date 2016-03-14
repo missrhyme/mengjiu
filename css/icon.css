@@ -63,6 +63,12 @@
 .icon-good:before{
 	content: '\E013';
 }
+.icon-good-solid{
+  background: #e48dc0;
+}
+.icon-good-solid:before{
+  content: '\E013';
+}
 .icon-houseType:before{
 	content: '\E014';
 }
@@ -71,6 +77,12 @@
 }
 .icon-message:before{
 	content: '\E016';
+}
+.icon-message-solid{
+  background: #b59de6;
+}
+.icon-message-solid:before{
+  content: '\E016';
 }
 .icon-more:before{
 	content: '\E017';
@@ -118,18 +130,12 @@
 .icon-hint:before{
 	content: '\E030';
 }
-.icon-robcustomer{
-	background: #ff6263;
-	width: 35px;
-	height: 35px;
-	border-radius: 10px;
-	color: #fff;
+.icon-hint-solid{
+  background: #fb9e89;
 }
-.icon-robcustomer:before{
-	content: '\E007';
-	font-size: 2rem;
+.icon-hint-solid:before{
+  content: '\E030';
 }
-
 .icon-notebubble{
 	color: #fff;
 	padding: 0 5px;

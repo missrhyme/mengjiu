@@ -11,7 +11,7 @@ import * as ActivityActions from '../actions/activity'
 const tagList = [{
   src : 'http://tp1.sinaimg.cn/1724597844/50/5727282860/1',
   title : '公共讲座',
-  to : 'xxx'
+  to : '/list/lecture'
 },{
   src : 'http://tp4.sinaimg.cn/1886252463/50/40021607890/1',
   title : '文艺演出',

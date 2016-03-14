@@ -27,14 +27,32 @@
 }
 
 .activity-list>li p{
-  padding-left: 22px;
+  padding-left: 50px;
   line-height: 20px;
   font-size: 1.2rem;
+  color: #666;
 }
 .activity-item-option{
   border-top: 1px solid #e8e8e8;
   padding: 5px 0;
+  position: relative;
 }
-.activity-item-option .iconfont{
+.activity-icon-like{
+  position: absolute;
+  left: 10px;
+  top: 25px;
+  color: #f60;
+  font-size: 2.4rem;
+}
+.activity-item-subinfo{
+  position: absolute;
+  right: 20px;
+  bottom: 10px;
+}
+.activity-item-subinfo>b{
+  color: #f40;
+  font-size: 1.6rem;
+}
+.activity-item-option>p>i{
   margin: 0 15px 4px 0;
 }
