@@ -9,29 +9,29 @@ import { TagGroup, Tag } from '../components/Tag'
 import * as ActivityActions from '../actions/activity'
 
 const tagList = [{
-  src : 'http://tp1.sinaimg.cn/1724597844/50/5727282860/1',
+  icon : 'lecture',
   title : '公共讲座',
-  to : '/list/lecture'
+  to : '/list/1/10011'
 },{
-  src : 'http://tp4.sinaimg.cn/1886252463/50/40021607890/1',
+  icon : 'art',
   title : '文艺演出',
-  to : 'xxx'
+  to : '/list/1/10012'
 },{
-  src : 'http://tp4.sinaimg.cn/2029177923/50/5711041271/0',
+  icon : 'sports',
   title : '体育赛事',
-  to : 'xxx'
+  to : '/list/1/10013'
 },{
-  src : 'http://tp4.sinaimg.cn/1886252463/50/40021607890/1',
+  icon : 'festival',
   title : '节庆社交',
-  to : 'xxx'
+  to : '/list/1/10014'
 },{
-  src : 'http://tp4.sinaimg.cn/2029177923/50/5711041271/0',
+  icon : 'match',
   title : '竞赛培训',
-  to : 'xxx'
+  to : '/list/1/10015'
 },{
-  src : 'http://tp4.sinaimg.cn/1886252463/50/40021607890/1',
+  icon : 'corporation',
   title : '缤纷社团',
-  to : 'xxx'
+  to : '/list/1/10016'
 }]
 
 class SchoolActivity extends Component {

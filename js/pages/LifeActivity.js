@@ -9,17 +9,17 @@ import { TagGroup, Tag } from '../components/Tag'
 import * as ActivityActions from '../actions/activity'
 
 const tagList = [{
-  icon : 'work',
-  title : '工作实习',
-  to : '/list/2/20011'
+  icon : 'entertainment',
+  title : '生活娱乐',
+  to : '/list/4/40011'
 },{
-  icon : 'inschool',
-  title : '校内招募',
-  to : '/list/2/20012'
+  icon : 'food',
+  title : '购物美食',
+  to : '/list/4/40012'
 },{
-  icon : 'otherRec',
-  title : '其他招募',
-  to : '/list/2/20013'
+  icon : 'transport',
+  title : '交通出行',
+  to : '/list/4/40013'
 }]
 
 class SchoolActivity extends Component {

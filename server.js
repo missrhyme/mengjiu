@@ -25,37 +25,32 @@ app.get("/api/activites", function(req, res){
         image : 'http://ww3.sinaimg.cn/bmiddle/005GFJLkgw1f168ivy2lfj31kw28gdvk.jpg',
         title : '电信学院沿途有你一起爱晚会晚会晚会晚会晚会晚会晚会晚会晚会晚会晚会晚会',
         location: '上海市嘉定区XX镇',
-        tel : 13777777777,
-        view: 1280,
-        like: 375
-      },
-      {
+        startTime: 1458452311111,
+        endTime : 1458453311111,
+        personNum: 300,
+        hot : 0,
+        isActive : false,
+        type: 1,
+        subType : 10011,
+        effective: '130天内',
+        salary : '200元/天',
+        releaseTime : '刚刚'
+      },{
         id: 222,
-        image : 'http://ww1.sinaimg.cn/bmiddle/b376de6djw1f0tdzg3vwhj209q09qaak.jpg',
-        title : '摇曳百合~就要开始了哦~',
+        image : 'http://ww3.sinaimg.cn/bmiddle/005GFJLkgw1f168ivy2lfj31kw28gdvk.jpg',
+        title : '招钢琴教师',
         location: '上海市嘉定区XX镇',
-        tel : 13777777777,
-        view: 1281,
-        like: 315
-      },
-      {
-        id: 333,
-        image : 'http://ww2.sinaimg.cn/bmiddle/6910cd56jw1f12soszax9j20gx0d53zn.jpg',
-        title : '诶！~~',
-        location: '上海市嘉定区XX镇',
-        tel : 13777777777,
-        view: 1282,
-        like: 325
-      },
-      {
-        id: 444,
-        image : 'http://ww4.sinaimg.cn/bmiddle/60f35ddcgw1f0l4dodshlj20rt0qodkr.jpg',
-        title : '喵帕斯！',
-        location: '上海市嘉定区XX镇',
-        tel : 13777777777,
-        view: 1283,
-        like: 395
-      },
+        startTime: 1458452311111,
+        endTime : 1458453311111,
+        personNum: 300,
+        hot : 0,
+        isActive : false,
+        type: 2,
+        subType : 10011,
+        effective: '130天内',
+        salary : '200元/天',
+        releaseTime : '刚刚'
+      }
     ]
   }))
 })

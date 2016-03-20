@@ -42,8 +42,8 @@ class HomeBox extends Component {
       	<Header title="噼里啪啦" hasReturn={false} />
         <TabGroup>
           <Tab title="校园活动" to="/" />
-          <Tab title="招聘宣讲" to="/home/recruit" />
-          <Tab title="兼职赚钱" to="/home/parttime" />
+          <Tab title="求职招募" to="/home/recruit" />
+          <Tab title="兼职赚钱" to="/home/job" />
           <Tab title="生活周边" to="/home/life" />
         </TabGroup>
         <Slider {...settings} >

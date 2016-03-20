@@ -36,7 +36,7 @@ module.exports = {
     },
     {
       test:/\.(png|jpg|eot|woff|ttf|svg)$/,
-      loader: 'url-loader?limit=1'
+      loader: 'url-loader?limit=102400'
     }]
   },
   externals: {

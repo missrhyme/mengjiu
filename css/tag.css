@@ -9,9 +9,15 @@
   background: #fff;
   margin: 0 5px 5px 0;
 }
-.taglist li img{
+.taglist li i{
+  display: block;
+  width: 40px;
+  height: 40px;
   border-radius: 20px;
-  float: left;;
+  float: left;
+  background-image: url(../img/activityIcon.jpg);
+  background-size: 257px auto;
+  background-repeat: no-repeat;
 }
 .taglist li p{
   display: inline-block;
@@ -20,4 +26,54 @@
   height: 40px;
   margin-left: 10px;
   padding-top: 5px;
+}
+
+/*1*/
+.taglist li i.lecture{
+  background-position: -2px -2px;
+}
+.taglist li i.art{
+  background-position: -45px -2px;
+}
+.taglist li i.sports{
+  background-position: -88px -2px;
+}
+.taglist li i.festival{
+  background-position: -131px -2px;
+}
+.taglist li i.match{
+  background-position: -173px -2px;
+}
+.taglist li i.corporation{
+  background-position: -215px -2px;
+}
+/*2*/
+.taglist li i.work{
+  background-position: -2px -45px;
+}
+.taglist li i.inschool{
+  background-position: -45px -45px;
+}
+.taglist li i.otherRec{
+  background-position: -88px -45px;
+}
+/*3*/
+.taglist li i.teach{
+  background-position: -131px -45px;
+}
+.taglist li i.relatedJob{
+  background-position: -173px -45px;
+}
+.taglist li i.project{
+  background-position: -215px -45px;
+}
+/*4*/
+.taglist li i.entertainment{
+  background-position: -2px -88px;
+}
+.taglist li i.food{
+  background-position: -45px -88px;
+}
+.taglist li i.transport{
+  background-position: -88px -88px;
 }

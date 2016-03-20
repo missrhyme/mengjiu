@@ -42,13 +42,13 @@ export default class Detail extends Component{
           <p>{author}</p>
         </section>
         <section className="detail-info">
-          <p><i className="iconfont icon-tel" />{time}</p>
-          <p><i className="iconfont icon-tel" />{location}</p>
+          <p><i className="iconfont icon-time" />{time}</p>
+          <p><i className="iconfont icon-location-solid" />{location}</p>
         </section>
         <section className="detail-info">
           <p><i className="iconfont icon-tel" />{tel}</p>
-          <p><i className="iconfont icon-tel" />{email}</p>
-          <p><i className="iconfont icon-tel" />{qq}</p>
+          <p><i className="iconfont icon-message" />{email}</p>
+          <p><i className="iconfont icon-qq" />{qq}</p>
         </section>
         <section className="detail-intro">
           <h3>活动简介</h3>

@@ -13,11 +13,11 @@ export class TagGroup extends Component {
 
 export class Tag extends Component {
   render(){
-    const { src, title, to } = this.props;
+    const { icon, title, to } = this.props;
     return(
       <li>
         <Link to={to}>
-          <img src={src} width="40" height="40" />
+          <i className={icon} />
           <p>{title}</p>
         </Link>
       </li>

@@ -136,6 +136,27 @@
 .icon-hint-solid:before{
   content: '\E030';
 }
+.icon-fire:before{
+  content: '\E031';
+}
+.icon-info:before{
+  content: '\E032';
+}
+.icon-location-solid:before{
+  content: '\E033';
+}
+.icon-location:before{
+  content: '\E034';
+}
+.icon-love-solid:before{
+  content: '\E035';
+}
+.icon-love:before{
+  content: '\E036';
+}
+.icon-qq:before{
+  content: '\E037';
+}
 .icon-notebubble{
 	color: #fff;
 	padding: 0 5px;
