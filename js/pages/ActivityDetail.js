@@ -46,9 +46,9 @@ export default class Detail extends Component{
           <p><i className="iconfont icon-location-solid" />{location}</p>
         </section>
         <section className="detail-info">
-          <p><i className="iconfont icon-tel" />{tel}</p>
-          <p><i className="iconfont icon-message" />{email}</p>
-          <p><i className="iconfont icon-qq" />{qq}</p>
+          { tel!='' && <p><i className="iconfont icon-tel" />{tel}</p> }
+          { email!='' && <p><i className="iconfont icon-message" />{email}</p> }
+          { qq!='' && <p><i className="iconfont icon-qq" />{qq}</p> }
         </section>
         <section className="detail-intro">
           <h3>活动简介</h3>

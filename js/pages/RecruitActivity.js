@@ -24,8 +24,9 @@ const tagList = [{
 
 class SchoolActivity extends Component {
   componentWillMount(){
-    this.props.activityActions.getActivities();
-    //this.props.homeActions.getSliders();
+    this.props.activityActions.getActivities({
+      type : 2
+    });
   }
   render() {
     const tags = tagList.map( item=><Tag {...item} key={item.title} /> );

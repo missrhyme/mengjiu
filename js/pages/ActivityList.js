@@ -12,7 +12,7 @@ const arr = [
 export default class Discover extends Component{
 	render() {
 		return(
-			<div className="fullpage-gray">
+			<div className="fullpage-gray" style={{background:'#fff'}} >
 				<Header title="活动列表" />
         <section className="tab" style={{marginBottom : 0}}>
           <a href="javascript:;" className="current">按时间</a>

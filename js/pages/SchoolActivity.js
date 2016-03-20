@@ -36,8 +36,9 @@ const tagList = [{
 
 class SchoolActivity extends Component {
   componentWillMount(){
-    this.props.activityActions.getActivities();
-    //this.props.homeActions.getSliders();
+    this.props.activityActions.getActivities({
+      type : 1
+    });
   }
   render() {
     const tags = tagList.map( item=><Tag {...item} key={item.title} /> );

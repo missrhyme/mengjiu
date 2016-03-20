@@ -22,8 +22,8 @@ import createPromiseThunk from '../utils/PromiseThunk'
 // 	}
 // }
 
-export function getActivities(id) {
-	return createPromiseThunk( ACTIVITY_GET , () => api.getActivities(id) )
+export function getActivities(data) {
+	return createPromiseThunk( ACTIVITY_GET , () => api.getActivities(data) )
 }
 
 export function getDetail(id) {

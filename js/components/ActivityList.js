@@ -4,7 +4,9 @@ import moment from 'moment'
 
 export default class List extends Component{
   render(){
-    const list = this.props.data.map( item => <Item key={item.id} {...item} />)
+    const list = this.props.data.length > 0 ?
+      this.props.data.map( item => <Item key={item.id} {...item} />) :
+      <section style={{textAlign: 'center', marginTop: 30}}>暂无数据</section>;
     return(
       <ul className="activity-list">
         {list}
@@ -36,7 +38,7 @@ class Item extends Component{
             <p className="activity-item-subinfo"><b>{personNum}</b>人</p>
             { myType == 'activity' && <p><i className="iconfont icon-time" />{moment(startTime).format('YYYY/MM/DD hh:mm')}</p> }
             { myType == 'job' && <p><i className="iconfont icon-time" />{`${effective}有效 ${releaseTime}更新`}</p> }
-            { myType == 'job' && <p><i className="iconfont icon-info" />{salary}</p> }
+            { myType == 'job' && <p><i className="iconfont icon-rmb" />{salary}</p> }
             <p><i className="iconfont icon-location" />{location}</p>
           </section>
         </Link>

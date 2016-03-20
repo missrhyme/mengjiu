@@ -33,7 +33,7 @@ class Item extends Component{
               <p><i className="iconfont icon-time" /><strong>{moment(this.props.startTime).format('YYYY/MM/DD hh:mm')} - {moment(this.props.endTime).format('YYYY/MM/DD hh:mm')}</strong></p>
             }
             { myType == 'job' && <p><i className="iconfont icon-time" />{`${effective} ${releaseTime}更新`}</p> }
-            { myType == 'job' && <p><i className="iconfont icon-info" />{salary}</p> }
+            { myType == 'job' && <p><i className="iconfont icon-rmb" />{salary}</p> }
             <p><i className="iconfont icon-location" /><strong>{location}</strong></p>
           </section>
         </Link>

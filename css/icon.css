@@ -157,6 +157,9 @@
 .icon-qq:before{
   content: '\E037';
 }
+.icon-rmb:before{
+  content: '\E038';
+}
 .icon-notebubble{
 	color: #fff;
 	padding: 0 5px;

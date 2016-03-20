@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "newApp",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "production" : "webpack --config webpack.config.production.js -p && node server-production.js"
   },
   "dependencies": {
     "core-js": "^2.0.3",

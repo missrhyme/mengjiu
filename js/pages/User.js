@@ -33,7 +33,7 @@ export default class User extends Component{
 					<p>萌啾号：{id}</p>
 				</section>
         <BlockGroup>
-          <Block title="活动收藏" link="/list/collect" iconClass="icon-good-solid"/>
+          <Block title="活动收藏" link="/list/favor/myFavor" iconClass="icon-good-solid"/>
           <Block title="联系我们" link="/user" iconClass="icon-message-solid" />
           <Block title="意见反馈" link="/user" iconClass="icon-hint-solid" />
         </BlockGroup>

@@ -75,7 +75,7 @@
 
 /*activity main list*/
 .main-list{
-
+  background: #fff;
 }
 .main-list li{
   border-bottom: 1px solid #e8e8e8;

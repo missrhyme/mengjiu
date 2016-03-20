@@ -20,8 +20,8 @@ export default class Discover extends Component{
 		return(
 			<div className="fullpage-gray">
 				<Header title="发现" hasReturn={false} />
-				<section style={style}>
-					<p>施工</p>
+				<section style={{textAlign: 'center', marginTop : 100}}>
+					<p>施工中...</p>
 				</section>
         <Footer />
       </div>
