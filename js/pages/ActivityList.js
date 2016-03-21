@@ -6,8 +6,8 @@ import List from '../components/ActivityFilterList'
 
 
 const arr = [
-	{"title":"同济樱花","id":1,"image":"http://ww3.sinaimg.cn/bmiddle/48e837eegw1f20xyk1bdpj20li0e3aps.jpg","location":"同济大学四平路校区: 樱花大道","startTime":1467386531000,"endTime":1470064931000,"personNum":0,"type":1,"subType":10012,"hot":0,"isActive":1,"effective":"还剩134天","salary":"200元/时","releaseTime":"刚刚"},
-	{"title":"招钢琴教师","id":12,"image":"http://ww3.sinaimg.cn/bmiddle/48e837eegw1f20xyk1bdpj20li0e3aps.jpg","location":"同济大学四平路校区: 樱花大道","startTime":1467386531000,"endTime":1470064931000,"personNum":0,"type":3,"subType":10012,"hot":0,"isActive":1,"effective":"还剩134天","salary":"80元/时","releaseTime":"刚刚"}
+	{"title":"同济樱花","id":1,"image":"http://img5.imgtn.bdimg.com/it/u=1142119117,1666608334&fm=21&gp=0.jpg","location":"同济大学四平路校区: 樱花大道","startTime":1467386531000,"endTime":1470064931000,"personNum":0,"type":1,"subType":10012,"hot":0,"isActive":1,"effective":"还剩134天","salary":"200元/时","releaseTime":"刚刚"},
+	{"title":"招钢琴教师","id":12,"image":"http://img5.imgtn.bdimg.com/it/u=1384606030,1235105707&fm=21&gp=0.jpg","location":"同济大学四平路校区: 樱花大道","startTime":1467386531000,"endTime":1470064931000,"personNum":0,"type":3,"subType":10012,"hot":0,"isActive":1,"effective":"还剩134天","salary":"80元/时","releaseTime":"刚刚"}
 ]
 export default class Discover extends Component{
 	render() {

@@ -39,7 +39,7 @@ class HomeBox extends Component {
     //const tags = tagList.map( item=><Tag {...item} key={item.title} /> );
     return (
       <div className="fullpage-gray" style={{'overflowX':'hidden', paddingBottom: '50px'}}>
-      	<Header title="噼里啪啦" hasReturn={false} />
+      	<Header title="同济大学" hasReturn={false} />
         <TabGroup>
           <Tab title="校园活动" to="/" />
           <Tab title="求职招募" to="/home/recruit" />

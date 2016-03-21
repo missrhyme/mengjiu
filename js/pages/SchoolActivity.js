@@ -22,15 +22,15 @@ const tagList = [{
   to : '/list/1/10013'
 },{
   icon : 'festival',
-  title : '节庆社交',
+  title : '社团社交',
   to : '/list/1/10014'
 },{
   icon : 'match',
-  title : '竞赛培训',
+  title : '企业直通',
   to : '/list/1/10015'
 },{
   icon : 'corporation',
-  title : '缤纷社团',
+  title : '竞赛培训',
   to : '/list/1/10016'
 }]
 
