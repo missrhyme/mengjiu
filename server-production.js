@@ -16,7 +16,7 @@ app.get("/api/activites", function(req, res){
       result : [
         {
           id: 1,
-          image : 'http://img0.imgtn.bdimg.com/it/u=3324422817,2807945407&fm=21&gp=0.jpg',
+          image : 'http://ww2.sinaimg.cn/small/7b254335gw1f24wt3ps5lj21kw0w07oo.jpg',
           title : '“我的社区我做主”——参与式社区规划的理念与运作机制',
           location: '同济大学建筑与城市规划学院C楼',
           startTime: 1458452311111,
@@ -31,7 +31,7 @@ app.get("/api/activites", function(req, res){
           releaseTime : ''
         },{
           id: 2,
-          image : 'http://img1.imgtn.bdimg.com/it/u=3005295027,582560578&fm=21&gp=0.jpg',
+          image : 'http://ww2.sinaimg.cn/small/7b254335gw1f24wt3bb8wj21ao0q9afd.jpg',
           title : '电信学院2016届硕士研究生毕业典礼',
           location: '同济大学嘉定校区智信馆大厅',
           startTime: 1458452311111,
@@ -46,7 +46,7 @@ app.get("/api/activites", function(req, res){
           releaseTime : ''
         },{
           id: 3,
-          image : 'http://img1.imgtn.bdimg.com/it/u=3005295027,582560578&fm=21&gp=0.jpg',
+          image : 'http://ww2.sinaimg.cn/small/7b254335gw1f24wt27ogaj21kw0w0asm.jpg',
           title : '远足社团-2016春季踏青活动（崇明）',
           location: '上海崇明岛',
           startTime: 1458452311111,
@@ -61,7 +61,7 @@ app.get("/api/activites", function(req, res){
           releaseTime : ''
         },{
           id: 4,
-          image : 'http://img1.imgtn.bdimg.com/it/u=3005295027,582560578&fm=21&gp=0.jpg',
+          image : 'http://ww2.sinaimg.cn/small/7b254335gw1f24wt27ogaj21kw0w0asm.jpg',
           title : '直通梦想季——同济大学电信学院模拟面试大赛',
           location: '同济大学嘉定校区智信馆307室',
           startTime: 1458452311111,
@@ -83,7 +83,7 @@ app.get("/api/activites", function(req, res){
       result : [
         {
           id: 5,
-          image : 'http://ww3.sinaimg.cn/bmiddle/a5569db7gw1f23hnetrq6j237k2eou0y.jpg',
+          image : 'http://ww2.sinaimg.cn/small/7b254335gw1f24wt27ogaj21kw0w0asm.jpg',
           title : '嘉定江桥小学3年级数学家教',
           location: '上海市嘉定区江桥镇',
           startTime: 1458452311111,
@@ -98,7 +98,7 @@ app.get("/api/activites", function(req, res){
           releaseTime : '刚刚'
         },{
           id: 6,
-          image : 'http://ww3.sinaimg.cn/bmiddle/a5569db7gw1f23hnetrq6j237k2eou0y.jpg',
+          image : 'http://ww2.sinaimg.cn/small/7b254335gw1f24wt3ps5lj21kw0w07oo.jpg',
           title : '同济大学信息办招募相关技术人员',
           location: '同济大学四平路校区信息馆',
           startTime: 1458452311111,
@@ -130,15 +130,15 @@ app.get("/api/homeSliders", function(req, res){
       result : [
         {
           title: 'slider1',
-          image : 'http://img5.imgtn.bdimg.com/it/u=1142119117,1666608334&fm=21&gp=0.jpg'
+          image : 'http://ww2.sinaimg.cn/small/7b254335gw1f24wt3ps5lj21kw0w07oo.jpg'
         },
         {
           title: 'slider2',
-          image : 'http://img5.imgtn.bdimg.com/it/u=1384606030,1235105707&fm=21&gp=0.jpg'
+          image : 'http://ww2.sinaimg.cn/small/7b254335gw1f24wt27ogaj21kw0w0asm.jpg'
         },
         {
           title: 'slider3',
-          image : 'http://img0.imgtn.bdimg.com/it/u=3264338499,4022972317&fm=21&gp=0.jpg'
+          image : 'http://ww2.sinaimg.cn/small/7b254335gw1f24wt3bb8wj21ao0q9afd.jpg'
         }
       ]
     }))
