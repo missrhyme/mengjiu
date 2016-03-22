@@ -43,6 +43,9 @@
 	content:'\E007';
 	font-size: 2rem;
 }
+.icon-people:before{
+  content:'\E007';
+}
 .active .icon-user:before{
 	color: #0080ff;
 	content:'\E008';

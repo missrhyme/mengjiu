@@ -16,21 +16,25 @@ export default class List extends Component{
 class Item extends Component{
   constructor(props){
     super(props);
-    this.getType = this.getType.bind(this);
+    this.getType       = this.getType.bind(this);
+    this.getTimeString = this.getTimeString.bind(this);
   }
   render(){
-    const { id, title, image, type, subType, location, personNum, hot, startTime, effective, releaseTime, salary } = this.props;
+    const { id, title, image, type, subType, location, personNum, hot, effective, releaseTime, salary, author } = this.props;
     const myType = this.getType(type);
     return(
       <li>
         <Link to={`/activity/${id}`}>
-          <img src={image} width="90" height="65"/>
-          <section className="main-info">
-            <h2 className="title">{title}</h2>
+          <section className="main-title">
+            <img src={image} />
+            <h2>{title}</h2>
+          </section>
+          <section className="main-content">
             <i className="iconfont icon-fire activity-icon-hot" />
             <section className="main-subinfo"><b>300</b>人</section>
+            { myType == 'activity' && <p><i className="iconfont icon-people" /><strong>{author}</strong></p>}
             { myType == 'activity' &&
-              <p><i className="iconfont icon-time" /><strong>{moment(this.props.startTime).format('YYYY/MM/DD hh:mm')} - {moment(this.props.endTime).format('YYYY/MM/DD hh:mm')}</strong></p>
+              <p><i className="iconfont icon-time" /><strong>{this.getTimeString()}</strong></p>
             }
             { myType == 'job' && <p><i className="iconfont icon-time" />{`${effective} ${releaseTime}更新`}</p> }
             { myType == 'job' && <p><i className="iconfont icon-rmb" />{salary}</p> }
@@ -55,7 +59,12 @@ class Item extends Component{
     }
   }
 
-  addLike(e){
-    e.stopPropgation();
+  getTimeString(){
+    const { startTime, endTime } = this.props;
+    if( moment(startTime).format('YYYY/MM/DD') == moment(endTime).format('YYYY/MM/DD') ){
+      return `${moment(startTime).format('YYYY/MM/DD hh:mm')} - ${moment(endTime).format('hh:mm')}`
+    }else{
+      return `${moment(startTime).format('YYYY/MM/DD hh:mm')} - ${moment(endTime).format('YYYY/MM/DD hh:mm')}`
+    }
   }
 }

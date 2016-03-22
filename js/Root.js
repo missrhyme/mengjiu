@@ -10,6 +10,7 @@ import LifeActivity from './pages/LifeActivity'
 import Discover from './pages/Discover'
 import ActivityDetail from './pages/ActivityDetail'
 import User from './pages/User'
+import MyFavor from './pages/MyFavor'
 
 export default class Root extends Component {
 	render(){
@@ -25,6 +26,7 @@ export default class Root extends Component {
 				<Route path="/activity/:id" component={ActivityDetail} />
 				<Route path="/discover" component={Discover} />
 				<Route path="/user" component={User} />
+				<Route path="/myfavor" component={MyFavor} />
 			</Router>
 		)
 	}

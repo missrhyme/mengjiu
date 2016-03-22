@@ -22,9 +22,14 @@ class Item extends Component{
     this.addLike = this.addLike.bind(this);
   }
 
+  state = {
+    favor : this.props.favor? true : false
+  }
+
   render(){
     const { id, title, type, subType, location, personNum, hot, startTime, effective, releaseTime, salary } = this.props;
     const myType = this.getType(type);
+    const favorClass = this.state.favor? 'icon-love-solid favor-active' : 'icon-love';
     return(
       <li>
         <Link to={`/activity/${id}`}>
@@ -32,10 +37,11 @@ class Item extends Component{
             <span className="title">{title}</span>
             <i className="iconfont icon-next" />
           </section>
-          <section className={`activity-item-option ${myType}`}>
+          <section className="activity-item-option">
             <i className="iconfont icon-fire activity-icon-hot" />
-            <i className="iconfont icon-love activity-icon-favor" onClick={this.addLike} />
-            <p className="activity-item-subinfo"><b>{personNum}</b>人</p>
+            <i className={`iconfont activity-icon-favor ${favorClass}`} onClick={this.addLike} />
+            <section className="activity-item-subinfo"><b>{personNum}</b>人</section>
+            { myType == 'activity' && <p><i className="iconfont icon-people"/>同济大学电信学院同济大学电信学院同济大学电信学院</p> }
             { myType == 'activity' && <p><i className="iconfont icon-time" />{moment(startTime).format('YYYY/MM/DD hh:mm')}</p> }
             { myType == 'job' && <p><i className="iconfont icon-time" />{`${effective}有效 ${releaseTime}更新`}</p> }
             { myType == 'job' && <p><i className="iconfont icon-rmb" />{salary}</p> }
@@ -62,6 +68,8 @@ class Item extends Component{
 
   addLike(e){
     e.preventDefault();
-    e.stopPropgation();
+    this.setState({
+      favor : !this.state.favor
+    })
   }
 }

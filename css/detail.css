@@ -17,6 +17,10 @@
 }
 .detail-info>p{
   line-height: 30px;
+  width: calc( 100% - 20px );
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .detail-info i{
   margin-right: 20px;

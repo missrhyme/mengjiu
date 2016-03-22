@@ -33,6 +33,7 @@ class SchoolActivity extends Component {
     return (
       <div>
         <TagGroup>{tags}</TagGroup>
+        <section className="home-seg">近期推荐</section>
         <List data={this.props.activity.activity} />
       </div>
     )
