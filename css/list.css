@@ -9,8 +9,9 @@
   position: relative;
 }
 .activity-list>li .title-wrap{
-  height: 50px;
-  line-height: 50px;
+  height: 40px;
+  line-height: 40px;
+  background-color: #fffacd;
 }
 .title-wrap i{
   position: absolute;
@@ -43,14 +44,14 @@
   position: absolute;
   left: 15px;
   top: 10px;
-  color: #f60;
+  color: #ff0000;
   font-size: 2.0rem;
 }
 .activity-icon-hot{
   position: absolute;
   top: 20px;
   right: 20px;
-  color: #f60;
+  color: #ff0000;
   font-size: 1.6rem;
 }
 .activity-item-option.activity .activity-icon-hot{
@@ -82,7 +83,7 @@
 .main-list li{
   border-bottom: 1px solid #e8e8e8;
   margin: 0 10px;
-  padding: 5px 0 0 130px;
+  padding: 5px 0 0 95px;
 
   position: relative;
   display: -webkit-box;
@@ -101,10 +102,11 @@
   margin-bottom: 5px;
   font-size: 1.5rem;
   font-weight: bold;
+  line-height: 20px;
 }
 .main-info>p{
   margin-bottom: 5px;
-  line-height: 1.4rem;
+  line-height: 1.2rem;
 }
 .main-info>p i{
   margin-right: 5px;

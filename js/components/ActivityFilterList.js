@@ -24,7 +24,7 @@ class Item extends Component{
     return(
       <li>
         <Link to={`/activity/${id}`}>
-          <img src={image} width="124" height="80"/>
+          <img src={image} width="90" height="65"/>
           <section className="main-info">
             <h2 className="title">{title}</h2>
             <i className="iconfont icon-fire activity-icon-hot" />

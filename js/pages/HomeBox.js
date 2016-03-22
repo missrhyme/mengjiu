@@ -26,13 +26,13 @@ class HomeBox extends Component {
       slidesToScroll: 1,
     };
     const sliderStyle = {
-      height: '130px'
+      height: '145px'
     }
     const { user, home, actions } = this.props;
     const sliders = home.sliders.map( item => {
       return(
         <div style={sliderStyle} key={item.title}>
-          <img src={item.image} alt={item.title} height="130" width="100%"/>
+          <img src={item.image} alt={item.title} height="145" width="100%"/>
         </div>
       )
     });

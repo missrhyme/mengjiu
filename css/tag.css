@@ -1,11 +1,11 @@
 .taglist{
-  margin-top: 5px;
+  margin-top: 8px;
 }
 .taglist li{
-  width: calc( 33.3% - 5px );
+  width: calc( 33.333% - 5px );
   display: inline-block;
   position: relative;
-  padding: 10px 0 10px 15px;
+  padding: 10px 0 10px 16px;
   font-size: 1.2rem;
   background: #fff;
   margin: 0 5px 0 0;

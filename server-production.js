@@ -74,6 +74,36 @@ app.get("/api/activites", function(req, res){
           effective: '',
           salary : '',
           releaseTime : ''
+        },{
+          id: 5,
+          image : 'http://ww2.sinaimg.cn/small/7b254335gw1f24wt27ogaj21kw0w0asm.jpg',
+          title : '女生节——同济大学电信学院女生节心愿实现大会',
+          location: '同济大学嘉定校区117会议室',
+          startTime: 1458452311111,
+          endTime : 1458453311111,
+          personNum: 200,
+          hot : 0,
+          isActive : false,
+          type: 1,
+          subType : 10011,
+          effective: '',
+          salary : '',
+          releaseTime : ''
+        },{
+          id: 6,
+          image : 'http://ww2.sinaimg.cn/small/7b254335gw1f24wt27ogaj21kw0w0asm.jpg',
+          title : '宝马日——汽车学院宣传日活动',
+          location: '同济大学嘉定校区新天地',
+          startTime: 1458452311111,
+          endTime : 1458453311111,
+          personNum: 200,
+          hot : 0,
+          isActive : false,
+          type: 1,
+          subType : 10011,
+          effective: '',
+          salary : '',
+          releaseTime : ''
         }
       ]
     }))
@@ -82,7 +112,7 @@ app.get("/api/activites", function(req, res){
       status : 200,
       result : [
         {
-          id: 5,
+          id: 7,
           image : 'http://ww2.sinaimg.cn/small/7b254335gw1f24wt27ogaj21kw0w0asm.jpg',
           title : '嘉定江桥小学3年级数学家教',
           location: '上海市嘉定区江桥镇',
@@ -97,7 +127,7 @@ app.get("/api/activites", function(req, res){
           salary : '100元/小时',
           releaseTime : '刚刚'
         },{
-          id: 6,
+          id: 8,
           image : 'http://ww2.sinaimg.cn/small/7b254335gw1f24wt3ps5lj21kw0w07oo.jpg',
           title : '同济大学信息办招募相关技术人员',
           location: '同济大学四平路校区信息馆',
@@ -111,7 +141,23 @@ app.get("/api/activites", function(req, res){
           effective: '130天内',
           salary : '200元/天',
           releaseTime : '刚刚'
+        },{
+          id: 9,
+          image : 'http://ww2.sinaimg.cn/small/7b254335gw1f24wt27ogaj21kw0w0asm.jpg',
+          title : '同济大学电信学院招募数据库管理员',
+          location: '同济大学嘉定校区智信馆',
+          startTime: 1458452311111,
+          endTime : 1458453311111,
+          personNum: 10,
+          hot : 0,
+          isActive : false,
+          type: 2,
+          subType : 20011,
+          effective: '100天内',
+          salary : '3000元/月',
+          releaseTime : '2天前'
         }
+
       ]
     }))
   }else{
