@@ -10,7 +10,7 @@ class Footer extends Component {
 		return(
 			<footer>
 				<FooterTab icon='icon-customer' title='首页' link='/' />
-				<FooterTab icon='icon-discover' title='发现' link='/discover'/>
+				<FooterTab icon='icon-discover' title='现场' link='/discover'/>
 				<FooterTab icon='icon-user' title='我的' link='/user' />
 			</footer>
 		);
