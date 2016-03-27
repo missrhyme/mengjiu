@@ -3,6 +3,6 @@ import {fetch} from '../utils/ApiUtils'
 //获取轮播图
 export function getSliders(){
 	return fetch({
-		url : '/api/homeSliders'
+		url : '/api/home/GetSliders'
 	})
 }

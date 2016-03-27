@@ -32,7 +32,7 @@ class HomeBox extends Component {
     const sliders = home.sliders.map( item => {
       return(
         <div style={sliderStyle} key={item.title}>
-          <img src={item.image} alt={item.title} height="145" width="100%"/>
+          <img src={item.imagePath} alt={item.title} height="145" width="100%"/>
         </div>
       )
     });

@@ -24,7 +24,9 @@ const tagList = [{
 
 class SchoolActivity extends Component {
   componentWillMount(){
-    this.props.activityActions.getActivities();
+    this.props.activityActions.getActivities({
+      type : 3
+    });
     //this.props.homeActions.getSliders();
   }
   render() {
