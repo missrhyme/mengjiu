@@ -30,21 +30,20 @@ class HomeBox extends Component {
     }
     const { user, home, actions } = this.props;
     const sliders = home.sliders.map( item => {
+      const func = item.actId ? () => location.hash = `/activity/${item.actId}` : () => window.open(item.link);
       return(
-        <div style={sliderStyle} key={item.title}>
+        <div style={sliderStyle} key={item.title} onClick={func}>
           <img src={item.imagePath} alt={item.title} height="145" width="100%"/>
         </div>
       )
     });
     //const tags = tagList.map( item=><Tag {...item} key={item.title} /> );
     return (
-      <div className="fullpage-gray" style={{'overflowX':'hidden', paddingBottom: '50px'}}>
+      <div style={{'overflowX':'hidden', paddingBottom: '50px', background:'#f4f4f4', overflowY: 'scroll'}}>
       	<Header title="同济大学" hasReturn={false} />
         <TabGroup>
           <Tab title="校园活动" to="/" />
           <Tab title="求职招募" to="/home/recruit" />
-          <Tab title="兼职赚钱" to="/home/job" />
-          <Tab title="生活周边" to="/home/life" />
         </TabGroup>
         <Slider {...settings} >
           {sliders}

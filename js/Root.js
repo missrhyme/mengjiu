@@ -5,8 +5,6 @@ import HomeBox from './pages/HomeBox'
 import List from './pages/ActivityList'
 import SchoolActivity from './pages/SchoolActivity'
 import RecruitActivity from './pages/RecruitActivity'
-import JobActivity from './pages/JobActivity'
-import LifeActivity from './pages/LifeActivity'
 import Discover from './pages/Discover'
 import ActivityDetail from './pages/ActivityDetail'
 import User from './pages/User'
@@ -19,8 +17,6 @@ export default class Root extends Component {
 				<Route component={HomeBox} >
 					<Route path="/" component={SchoolActivity} />
 					<Route path="/home/recruit" component={RecruitActivity} />
-					<Route path="/home/job" component={JobActivity} />
-					<Route path="/home/life" component={LifeActivity} />
 				</Route>
 				<Route path="/list/:type/:subtype" component={List} />
 				<Route path="/activity/:id" component={ActivityDetail} />

@@ -21,16 +21,23 @@ const imageStyle={
 	borderRadius: '30px'
 }
 
+const iStyle={
+	position:'absolute',
+	right	: 10,
+	top   : 30
+}
+
 export default class User extends Component{
 	render() {
-		const { image, id, name } = USERINFO;
+		const { image, id, name, score } = USERINFO;
 		return(
 			<div className="fullpage-gray">
         <Header title="我的" hasReturn={false} />
 				<section style={infoStyle}>
 					<img src={image} width="60" height="60" style={imageStyle}/>
 					<p>昵称：{name}</p>
-					<p>萌啾号：{id}</p>
+					<p>积分：{score}</p>
+					<i className="iconfont icon-next" style={iStyle}/>
 				</section>
         <BlockGroup>
           <Block title="活动收藏" link="/myfavor" iconClass="icon-good-solid"/>

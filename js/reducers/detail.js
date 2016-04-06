@@ -4,7 +4,7 @@ import {
 
 const initialState = {
     title: '',
-    image: [],
+    images: [],
     time : 0,
     location : '',
     view : 0,

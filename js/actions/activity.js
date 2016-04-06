@@ -1,6 +1,7 @@
 import * as api from '../api/activity'
 import {
 	ACTIVITY_GET,
+	ACTIVITY_GET_NEXT,
 	ACTIVITY_DETAIL,
 } from '../constants/ActionTypes'
 import createPromiseThunk from '../utils/PromiseThunk'
@@ -28,6 +29,10 @@ export function getActivities(data) {
 
 export function getDetail(id) {
 	return createPromiseThunk( ACTIVITY_DETAIL , () => api.getDetail(id) )
+}
+
+export function getActivitiesNext(data){
+	return createPromiseThunk( ACTIVITY_GET_NEXT , () => api.getActivities(data) )
 }
 //
 // export function addQuickReply(msg, id) {

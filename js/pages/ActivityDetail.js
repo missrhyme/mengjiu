@@ -31,7 +31,7 @@ export default class Detail extends Component{
   }
 
 	render() {
-    const { image, title, author, time, location, tel, email, qq, detail } = this.props.detail;
+    const { images, title, author, time, location, tel, email, qq, detail } = this.props.detail;
     const settings = {
       dots : true,
       infinite : true,
@@ -42,14 +42,13 @@ export default class Detail extends Component{
     const sliderStyle = {
       height: '180px'
     }
-    // const sliders = image.map( item => {
-    //   return(
-    //     <div style={sliderStyle} key={item.title}>
-    //       <img src={item.image} alt={item.title} height="180" width="100%"/>
-    //     </div>
-    //   )
-    // });
-    const sliders = <div style={sliderStyle}><img src={image} height="180" width="100%"/></div>;
+    const sliders = images.map( (item, index) => {
+      return(
+        <div style={sliderStyle} key={index}>
+          <img src={item} alt="" height="180" width="100%"/>
+        </div>
+      )
+    });
 		return(
       <div className="fullpage-gray">
         <Header title="活动详情" />

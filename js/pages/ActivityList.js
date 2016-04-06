@@ -4,22 +4,58 @@ import Header from '../components/Header'
 import Footer from '../components/Footer'
 import List from '../components/ActivityFilterList'
 
+import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
 
-const arr = [
-	{"title":"同济樱花节大学生摄影大赛","id":1,"author":"同济大学电信学院","image":"http://ww2.sinaimg.cn/small/7b254335gw1f24wt3ps5lj21kw0w07oo.jpg","location":"同济大学四平路校区: 樱花大道","startTime":1467386531000,"endTime":1470064931000,"personNum":0,"type":1,"subType":10012,"hot":0,"isActive":1,"effective":"还剩134天","salary":"200元/时","releaseTime":"刚刚"},
-	{"title":"同济桃花节大学生摄影大赛","id":2,"author":"同济大学电信学院","image":"http://ww2.sinaimg.cn/small/7b254335gw1f24wt3bb8wj21ao0q9afd.jpg","location":"同济大学四平路校区: 樱花大道","startTime":1467386531000,"endTime":1470064931000,"personNum":0,"type":3,"subType":10012,"hot":0,"isActive":1,"effective":"还剩134天","salary":"80元/时","releaseTime":"刚刚"}
-]
-export default class Discover extends Component{
+import * as ActivityActions from '../actions/activity'
+
+export default class ActivityList extends Component{
+	constructor(props){
+		super(props);
+		this.filterActivity = this.filterActivity.bind(this);
+	}
+
+	componentWillMount(){
+		const { type, subtype } = this.props.routeParams;
+		this.filterActivity(1);
+	}
+
 	render() {
 		return(
 			<div className="fullpage-gray" style={{background:'#fff'}} >
 				<Header title="活动列表" />
         <section className="tab" style={{marginBottom : 0}}>
-          <a href="javascript:;" className="current">按时间</a>
-          <a href="javascript:;">按热度</a>
+          <a href="javascript:;" className="current" onClick={ ()=> this.filterActivity(1) }>按时间</a>
+          <a href="javascript:;" onClick={ ()=> this.filterActivity(2) }>按热度</a>
         </section>
-				<List data={arr} />
+				<List data={[]} />
       </div>
 		);
 	}
+
+	filterActivity(sort){
+		const { type, subtype } = this.props.routeParams;
+		this.props.actions.getActivities({
+			type : type,
+			subtype : subtype,
+			sort : sort
+		});
+	}
 }
+
+function mapStateToProps(state){
+  return {
+    activity: state.activity
+  }
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+    actions: bindActionCreators(ActivityActions, dispatch),
+  }
+}
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(ActivityList)
