@@ -46,9 +46,9 @@ export const locationList = [{
   id : 10000,
   title : '同济大学'
 },{
-  id : 10011,
+  id : 10001,
   title : '同济大学嘉定校区'
 },{
-  id : 10012,
+  id : 10002,
   title : '同济大学四平路校区'
 }];
