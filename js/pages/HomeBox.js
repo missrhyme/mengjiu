@@ -4,7 +4,7 @@ import { bindActionCreators } from 'redux'
 
 import { Link } from 'react-router'
 import Slider from 'react-slick'
-import Header from '../components/Header'
+import { HeaderBox, OptionList, OptionItem} from '../components/Header'
 import Footer from '../components/Footer'
 //import { TagGroup, Tag } from '../components/Tag'
 import { TabGroup, Tab } from '../components/Tab'
@@ -40,7 +40,14 @@ class HomeBox extends Component {
     //const tags = tagList.map( item=><Tag {...item} key={item.title} /> );
     return (
       <div style={{'overflowX':'hidden', paddingBottom: '50px', background:'#f4f4f4', overflowY: 'scroll'}}>
-      	<Header title="同济大学" hasReturn={false} />
+      	<HeaderBox hasReturn={false} >
+          <h2>同济大学</h2>
+          <OptionList className="iconfont icon-location-solid">
+            <OptionItem>同济大学</OptionItem>
+            <OptionItem>同济大学本部</OptionItem>
+            <OptionItem>同济大学嘉定校区</OptionItem>
+          </OptionList>
+        </HeaderBox>
         <TabGroup>
           <Tab title="校园活动" to="/" />
           <Tab title="求职招募" to="/home/recruit" />

@@ -52,9 +52,12 @@ header .header-option{
 .header-option-list>li{
 	height: 42px;
 	line-height: 42px;
-	width: 100px;
+	width: 120px;
 	margin: 0 10px;
 	border-bottom: 1px solid #959595;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
 }
 .header-option-list>li>a{
 	display: block;
