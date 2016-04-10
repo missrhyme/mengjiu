@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 import Header from '../components/Header'
 import { BlockGroup, Block } from '../components/Block'
 import Footer from '../components/Footer'
+import HiddenLayer from '../components/HiddenLayer'
 
 const infoStyle={
 		backgroundColor: '#fff',
@@ -28,17 +29,29 @@ const iStyle={
 }
 
 export default class User extends Component{
+
+	state = {
+		active : false
+	}
+
 	render() {
 		const { image, id, name, score } = USERINFO;
 		return(
 			<div className="fullpage-gray">
-        <Header title="我的" hasReturn={false} />
-				<section style={infoStyle}>
+
+				<Header title="我的" hasReturn={false} />
+
+				<HiddenLayer active={this.state.active}>
+					<Header title="修改昵称" returnFunc={ ()=>this.setState({ active: false })} />
+				</HiddenLayer>
+
+				<section style={infoStyle} onClick={ ()=>this.setState({ active: true }) }>
 					<img src={image} width="60" height="60" style={imageStyle}/>
 					<p>昵称：{name}</p>
 					<p>积分：{score}</p>
 					<i className="iconfont icon-next" style={iStyle}/>
 				</section>
+
         <BlockGroup>
           <Block title="活动收藏" link="/myfavor" iconClass="icon-good-solid"/>
           <Block title="联系我们" link="/user" iconClass="icon-message-solid" />
