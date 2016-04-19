@@ -9,3 +9,13 @@ export function getFavorList(type = 1){
     }
 	})
 }
+
+//login
+export function userLogin(){
+	return fetch({
+		url : '/api/user/Login',
+    data: {
+      ticket : 1
+    }
+	})
+}

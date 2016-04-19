@@ -15,6 +15,8 @@ import * as HomeActions from '../actions/home'
 
 import { tag, locationList } from '../constants/HomeConstants'
 
+import { userLogin } from '../api/user'
+
 class HomeBox extends Component {
 
   constructor(props){
@@ -34,6 +36,7 @@ class HomeBox extends Component {
 
   componentWillMount(){
     this.getList();
+    userLogin();
     this.props.homeActions.getSliders();
   }
 

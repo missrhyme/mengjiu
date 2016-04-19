@@ -74,7 +74,7 @@ export default class ActivityList extends Component{
 			type : type,
 			subtype : subtype,
 			sort : this.state.sort,
-			page : this.state.page
+			p : this.state.page + 1
 		});
 	}
 }
