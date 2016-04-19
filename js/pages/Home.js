@@ -36,7 +36,7 @@ class HomeBox extends Component {
 
   componentWillMount(){
     this.getList();
-    userLogin();
+    //userLogin();
     this.props.homeActions.getSliders();
   }
 

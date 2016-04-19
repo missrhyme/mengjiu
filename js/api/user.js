@@ -15,7 +15,7 @@ export function userLogin(){
 	return fetch({
 		url : '/api/user/Login',
     data: {
-      ticket : 1
+      ticket : 2
     }
 	})
 }
