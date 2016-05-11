@@ -20,7 +20,7 @@ class Item extends Component{
     this.getTimeString = this.getTimeString.bind(this);
   }
   render(){
-    const { id, title, image, type, subType, location, personNum, hot, effective, releaseTime, salary, author } = this.props;
+    const { id, title, image, type, subType, location, personNum, hot, effective, releaseTime, info, author } = this.props;
     const myType = this.getType(type);
     return(
       <li>
@@ -37,7 +37,7 @@ class Item extends Component{
               <p><i className="iconfont icon-time" /><strong>{this.getTimeString()}</strong></p>
             }
             { myType == 'job' && <p><i className="iconfont icon-time" />{`${effective} ${releaseTime}更新`}</p> }
-            { myType == 'job' && <p><i className="iconfont icon-rmb" />{salary}</p> }
+            { myType == 'job' && <p><i className="iconfont icon-tag" />{info}</p> }
             <p><i className="iconfont icon-location" /><strong>{location}</strong></p>
           </section>
         </Link>
@@ -46,14 +46,10 @@ class Item extends Component{
   }
 
   getType(){
-    //目前有2种列表 活动 & 兼职
-    switch (this.props.type) {
-      case 2:
-      case 3:
+    switch (this.props.subType) {
+      case 20012:
+      case 20013:
         return 'job'
-      case 1:
-      case 4:
-        return 'activity'
       default:
         return 'activity'
     }

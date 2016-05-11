@@ -19,3 +19,14 @@ export function userLogin(){
     }
 	})
 }
+
+//修改昵称
+export function modifyUserName(username){
+	return fetch({
+		url : '/api/user/ModifyUserName',
+		type : 'post',
+		data : {
+			username : username
+		}
+	})
+}

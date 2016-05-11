@@ -27,7 +27,7 @@ class Item extends Component{
   }
 
   render(){
-    const { id, title, type, subType, location, personNum, hot, startTime, effective, releaseTime, salary } = this.props;
+    const { id, title, type, subType, location, personNum, hot, startTime, effective, releaseTime, info } = this.props;
     const myType = this.getType(type);
     const favorClass = this.state.favor? 'icon-love-solid favor-active' : 'icon-love';
     return(
@@ -44,7 +44,7 @@ class Item extends Component{
             { myType == 'activity' && <p><i className="iconfont icon-people"/>同济大学电信学院同济大学电信学院同济大学电信学院</p> }
             { myType == 'activity' && <p><i className="iconfont icon-time" />{moment(startTime).format('YYYY/MM/DD hh:mm')}</p> }
             { myType == 'job' && <p><i className="iconfont icon-time" />{`${effective}有效 ${releaseTime}更新`}</p> }
-            { myType == 'job' && <p><i className="iconfont icon-rmb" />{salary}</p> }
+            { myType == 'job' && <p><i className="iconfont icon-tag" />{info}</p> }
             <p><i className="iconfont icon-location" />{location}</p>
           </section>
         </Link>
@@ -53,14 +53,12 @@ class Item extends Component{
   }
 
   getType(){
+    console.log(this.props.subType)
     //目前有2种列表 活动 & 兼职
-    switch (this.props.type) {
-      case 2:
-      case 3:
+    switch (this.props.subType) {
+      case 20012:
+      case 20013:
         return 'job'
-      case 1:
-      case 4:
-        return 'activity'
       default:
         return 'activity'
     }
