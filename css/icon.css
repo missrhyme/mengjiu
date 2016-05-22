@@ -10,7 +10,9 @@
   display: inline-block;
   vertical-align: middle;
 }
-
+.icon-wx:before{
+  content:'\E002';
+}
 .icon-chat-solid:before{
 	color: #fff;
 	content:'\E002';

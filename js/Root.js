@@ -7,6 +7,7 @@ import Discover from './pages/Discover'
 import ActivityDetail from './pages/ActivityDetail'
 import User from './pages/User'
 import MyFavor from './pages/MyFavor'
+import AboutUs from './pages/AboutUs'
 
 export default class Root extends Component {
 	render(){
@@ -18,6 +19,7 @@ export default class Root extends Component {
 				<Route path="/discover" component={Discover} />
 				<Route path="/user" component={User} />
 				<Route path="/myfavor" component={MyFavor} />
+				<Route path="/aboutus" component={AboutUs} />
 			</Router>
 		)
 	}

@@ -4,7 +4,7 @@ module.exports = {
   ],
   output: {
     path: './dist/',
-    filename: 'bundle.js'
+    filename: 'index.js'
   },
   module: {
     loaders: [{
@@ -25,12 +25,12 @@ module.exports = {
     },
     {
       test:/\.(png|jpg|eot|woff|ttf|svg)$/,
-      loader: 'url-loader?limit=102400'
+      loader: 'url-loader?limit=1024000'
     }]
   },
   externals: {
     'zepto'     : 'Zepto',
-    // 'react'     : 'React',
-    // 'react-dom' : 'ReactDOM'
+    'react'     : 'React',
+    'react-dom' : 'ReactDOM'
   }
 }
