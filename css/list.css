@@ -34,6 +34,22 @@
   font-size: 1.2rem;
   color: #666;
 }
+.activity-item-tag{
+  position: absolute;
+  left: 0;
+  top: 0;
+  text-align: center;
+  display: inline-block;
+  width: 34px;
+  padding: 3px 4px;
+  margin: 3px 0 0 3px;
+  height: 34px;
+  font-size: 1.2rem;
+  line-height: 14px;
+  color: #fff;
+  border-radius: 5px;
+  border: 1px solid #6cf;
+}
 .activity-item-option{
   border-top: 1px solid #e8e8e8;
   padding: 8px 0;
@@ -61,6 +77,19 @@
   right: 20px;
   color: #f00;
   font-size: 1.6rem;
+}
+.activity-icon-order{
+  position: absolute;
+  padding: 0 2px;
+  top: 20px;
+  right: 40px;
+  border: 1px solid #fb9e89;
+  border-radius: 5px;
+}
+.activity-icon-order::before{
+  content: '约';
+  font-size: 1.2rem;
+  color: #fb9e89;
 }
 .main-subinfo,
 .activity-item-subinfo{
@@ -105,6 +134,10 @@
   padding: 5px 0 5px 10px;
   position: relative;
 }
+.main-content .activity-icon-order{
+  top: 10px;
+  right: 30px;
+}
 .main-content .activity-icon-hot{
   top: 10px;
   right: 10px;
@@ -125,4 +158,20 @@
 }
 .main-content>p>strong{
   font-weight: normal;
+}
+/*aboutus*/
+.aboutus-list li{
+  width: 33%;
+  float: left;
+  text-align: center;
+  margin: 10px 0;
+}
+.aboutus-list li>img{
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+.aboutus-list li>span{
+  display: block;
+  margin-top: 5px;
 }

@@ -20,7 +20,7 @@ class Item extends Component{
     this.getTimeString = this.getTimeString.bind(this);
   }
   render(){
-    const { id, title, image, type, subType, location, personNum, hot, effective, releaseTime, info, author } = this.props;
+    const { id, title, image, type, subType, location, personNum, hot, effective, releaseTime, info, author, needOrder } = this.props;
     const myType = this.getType(type);
     return(
       <li>
@@ -31,6 +31,7 @@ class Item extends Component{
           </section>
           <section className="main-content">
             <i className="iconfont icon-fire activity-icon-hot" />
+            { needOrder == 1 && <i className="activity-icon-order" /> }
             <section className="main-subinfo"><b>300</b>人</section>
             { myType == 'activity' && <p><i className="iconfont icon-people" /><strong>{author}</strong></p>}
             { myType == 'activity' &&
