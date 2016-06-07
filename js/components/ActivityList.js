@@ -3,6 +3,7 @@ import { Link } from 'react-router';
 import moment from 'moment'
 
 import { tagSettings } from '../constants/subTypeSettings'
+import { addFavor } from '../api/activity'
 
 export default class List extends Component{
   render(){
@@ -86,8 +87,11 @@ class Item extends Component{
 
   addLike(e){
     e.preventDefault();
-    this.setState({
-      favor : !this.state.favor
-    })
+    const { id } = this.props;
+    const act    = this.state.favor ? 'remove' : 'add';
+    addFavor(id, act)
+      .then(
+        () => this.setState({favor : !this.state.favor})
+      )
   }
 }

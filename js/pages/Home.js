@@ -83,7 +83,7 @@ class HomeBox extends Component {
 						href="javascript:;"
 						className={this.state.type == 2? 'current' : false}
 						onClick={ ()=> this.switchTab(2) }
-					>求职招募</a>
+					>企业直通</a>
         </section>
 
         <Slider {...settings} >

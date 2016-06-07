@@ -4,24 +4,25 @@
   "description": "newApp",
   "scripts": {
     "start": "node server.js",
-    "production" : "webpack --config webpack.config.production.js -p && node server-production.js"
+    "production" : "webpack --config webpack.config.production.js -p && node server-production.js",
+    "up" : "set NODE_ENV=production && webpack --config webpack.config.production.js -p"
   },
   "dependencies": {
     "core-js": "^2.0.3",
     "moment": "^2.12.0",
     "react": "^0.14.0",
     "react-dom": "^0.14.0",
-    "react-hot-loader": "^1.3.0",
     "react-redux": "^4.0.0",
     "react-router": "^2.0.0-rc5",
     "react-slick": "^0.10.0",
     "redux": "^3.0.4",
     "redux-thunk": "^1.0.0",
-    "scss-loader": "0.0.1",
     "underscore": "^1.8.3"
   },
   "devDependencies": {
     "babel-core": "^5.6.18",
+    "react-hot-loader": "^1.3.0",
+    "scss-loader": "0.0.1",
     "babel-loader": "^5.1.4",
     "babel-plugin-react-transform": "^1.0.3",
     "express": "^4.13.3",
