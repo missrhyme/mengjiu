@@ -9,6 +9,6 @@ export function getFavorList(type) {
 	return createPromiseThunk( USER_GET_FAVORLIST , () => api.getFavorList(type) )
 }
 
-export function getFavorList(type) {
+export function getNextFavorList(type) {
 	return createPromiseThunk( USER_NEXT_FAVORLIST , () => api.getFavorList(type) )
 }

@@ -21,7 +21,7 @@ export default class Favor extends Component{
 	}
 
 	componentWillMount(){
-			this.props.actions.getFavorList();
+		this.props.actions.getFavorList();
 	}
 
 	render() {

@@ -27,7 +27,7 @@ class Item extends Component{
   }
 
   state = {
-    favor : this.props.favor? true : false
+    favor : this.props.isFavor? true : false
   }
 
   render(){
