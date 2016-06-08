@@ -5,7 +5,7 @@
   "scripts": {
     "start": "node server.js",
     "production" : "webpack --config webpack.config.production.js -p && node server-production.js",
-    "up" : "set NODE_ENV=production&&webpack --config webpack.config.production.js -p"
+    "up" : "set NODE_ENV=production&&webpack --config webpack.config.production.js -p --define process.env.NODE_ENV='\"production\"'"
   },
   "dependencies": {
     "core-js": "^2.0.3",
