@@ -67,7 +67,7 @@ class HomeBox extends Component {
       <div style={{'overflowX':'hidden', paddingBottom: '50px', background:'#f4f4f4', overflowY: 'scroll'}}>
 
         <HeaderBox hasReturn={false} >
-          <h2>{title}</h2>
+          <h1>{title}</h1>
           <OptionList className="iconfont icon-location-solid">
             {location}
           </OptionList>

@@ -31,7 +31,7 @@ class Item extends Component{
   }
 
   render(){
-    const { id, title, type, subType, location, personNum, hot, startTime, effective, releaseTime, info, needOrder } = this.props;
+    const { id, title, type, subType, location, personNum, hot, startTime, effective, releaseTime, info, needOrder, author } = this.props;
     const myType = this.getType(type);
     const favorClass = this.state.favor? 'icon-love-solid favor-active' : 'icon-love';
     return(
@@ -47,7 +47,7 @@ class Item extends Component{
             { needOrder == 1 && <i className="activity-icon-order" /> }
             <i className={`iconfont activity-icon-favor ${favorClass}`} onClick={this.addLike} />
             <section className="activity-item-subinfo"><b>{personNum}</b>人</section>
-            { myType == 'activity' && <p><i className="iconfont icon-people"/>同济大学电信学院同济大学电信学院同济大学电信学院</p> }
+            { myType == 'activity' && <p><i className="iconfont icon-people"/>{author}</p> }
             { myType == 'activity' && <p><i className="iconfont icon-time" />{moment(startTime).format('YYYY/MM/DD hh:mm')}</p> }
             { myType == 'job' && <p><i className="iconfont icon-time" />{`${effective}有效 ${releaseTime}更新`}</p> }
             { myType == 'job' && <p><i className="iconfont icon-tag" />{info}</p> }
