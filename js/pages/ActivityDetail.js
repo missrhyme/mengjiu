@@ -32,7 +32,6 @@ export default class Detail extends Component{
 
 	render() {
     const { images, title, author, time, location, tel, email, qq, detail } = this.props.detail;
-    console.log(detail.split('\n'))
     const details = detail.split('\n').map(item => <p>{item}</p>);
     const settings = {
       dots : true,
