@@ -32,6 +32,8 @@ export default class Detail extends Component{
 
 	render() {
     const { images, title, author, time, location, tel, email, qq, detail } = this.props.detail;
+    console.log(detail.split('\n'))
+    const details = detail.split('\n').map(item => <p>{item}</p>);
     const settings = {
       dots : true,
       infinite : true,
@@ -70,7 +72,7 @@ export default class Detail extends Component{
         </section>
         <section className="detail-intro">
           <h3>活动简介</h3>
-          <p>{detail}</p>
+          {details}
         </section>
         <button className="detail-collectButton" onClick={this.addFavor}>{this.buttonMsg[this.state.favorStatus]}</button>
       </div>

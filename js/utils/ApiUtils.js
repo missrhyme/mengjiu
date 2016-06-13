@@ -1,6 +1,6 @@
 import 'core-js/es6/promise'
 
-const host = ''
+const host = '';
 //const host = 'http://115.28.68.32:8080'
 
 export function fetch({data, url, type='GET', dataType='json'}){
