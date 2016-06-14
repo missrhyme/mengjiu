@@ -48,7 +48,7 @@ class Item extends Component{
             <i className={`iconfont activity-icon-favor ${favorClass}`} onClick={this.addLike} />
             <section className="activity-item-subinfo"><b>{personNum}</b>人</section>
             { myType == 'activity' && <p><i className="iconfont icon-people"/>{author}</p> }
-            { myType == 'activity' && <p><i className="iconfont icon-time" />{moment(startTime).format('YYYY/MM/DD hh:mm')}</p> }
+            { myType == 'activity' && <p><i className="iconfont icon-time" />{moment(startTime).format('YYYY/MM/DD HH:mm')}</p> }
             { myType == 'job' && <p><i className="iconfont icon-time" />{`${effective}有效 ${releaseTime}更新`}</p> }
             { myType == 'job' && <p><i className="iconfont icon-tag" />{info}</p> }
             <p><i className="iconfont icon-location" />{location}</p>

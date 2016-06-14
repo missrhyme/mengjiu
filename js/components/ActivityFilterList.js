@@ -59,9 +59,9 @@ class Item extends Component{
   getTimeString(){
     const { startTime, endTime } = this.props;
     if( moment(startTime).format('YYYY/MM/DD') == moment(endTime).format('YYYY/MM/DD') ){
-      return `${moment(startTime).format('YYYY/MM/DD hh:mm')} - ${moment(endTime).format('hh:mm')}`
+      return `${moment(startTime).format('YYYY/MM/DD HH:mm')} - ${moment(endTime).format('HH:mm')}`
     }else{
-      return `${moment(startTime).format('YYYY/MM/DD hh:mm')} - ${moment(endTime).format('YYYY/MM/DD hh:mm')}`
+      return `${moment(startTime).format('YYYY/MM/DD HH:mm')} - ${moment(endTime).format('YYYY/MM/DD HH:mm')}`
     }
   }
 }

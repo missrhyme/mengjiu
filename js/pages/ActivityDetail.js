@@ -61,7 +61,7 @@ export default class Detail extends Component{
           <p>{author}</p>
         </section>
         <section className="detail-info">
-          <p><i className="iconfont icon-time" />{ moment(time).format('YYYY/MM/DD hh:mm') }</p>
+          <p><i className="iconfont icon-time" />{ moment(time).format('YYYY/MM/DD HH:mm') }</p>
           <p><i className="iconfont icon-location-solid" />{location}</p>
         </section>
         <section className="detail-info">
