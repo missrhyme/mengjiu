@@ -64,7 +64,7 @@ class HomeBox extends Component {
     const tags = tag[type].map( item=><Tag {...item} key={item.title} /> );
     const location = locationList.map( item=><OptionItem key={item.id} onClick={ ()=>this.switchLocation(item) }>{item.title}</OptionItem> );
     return (
-      <div style={{'overflowX':'hidden', paddingBottom: '50px', background:'#f4f4f4', overflowY: 'scroll'}}>
+      <div style={{overflowX:'hidden', paddingBottom: '50px', background:'#f4f4f4', overflowY: 'scroll'}}>
 
         <HeaderBox hasReturn={false} >
           <h1>{title}</h1>

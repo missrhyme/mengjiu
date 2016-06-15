@@ -91,7 +91,8 @@ class Item extends Component{
     const act    = this.state.favor ? 'remove' : 'add';
     addFavor(id, act)
       .then(
-        () => this.setState({favor : !this.state.favor})
+        () => this.setState({favor : !this.state.favor}),
+        r => console.log(r)
       )
   }
 }

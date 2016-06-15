@@ -12,12 +12,23 @@ export default class Header extends Component {
 		returnClass: 'iconfont icon-prev',
 		returnText : '',
 		link       : false,
-		returnFunc : () => window.history.go(-1)
+		returnFunc : null
 	}
+
+	static contextTypes = {
+    router : PropTypes.object
+  }
+
+  constructor(props){
+  	super(props)
+  	this.returnFunc = props.returnFunc ?
+  		props.returnFunc : 
+  		() => this.context.router.goBack();
+  }
 
 	render () {
 		return(
-			<HeaderBox {...this.props}>
+			<HeaderBox {...this.props} returnFunc={this.returnFunc} >
 				<h1>{this.props.title}</h1>
 
 				{this.props.optionFunc && 

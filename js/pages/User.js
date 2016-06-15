@@ -8,13 +8,13 @@ import HiddenLayer from '../components/HiddenLayer'
 import { modifyUserName } from '../api/user'
 
 const infoStyle={
-		backgroundColor: '#fff',
-    borderBottom: '1px solid #e0e0e0',
-		position:'relative',
-    padding: '20px 0 0 85px',
-    height: '90px',
-    lineHeight: '2.4rem',
-		fontSize : '1.4rem'
+	backgroundColor: '#fff',
+  borderBottom: '1px solid #e0e0e0',
+	position:'relative',
+  padding: '20px 0 0 85px',
+  height: '90px',
+  lineHeight: '2.4rem',
+	fontSize : '1.4rem'
 }
 
 const imageStyle={
