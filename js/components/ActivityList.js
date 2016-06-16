@@ -38,7 +38,7 @@ class Item extends Component{
   }
 
   render(){
-    const { id, title, type, subType, location, personNum, hot, startTime, effective, releaseTime, info, needOrder, author } = this.props;
+    const { id, title, type, location, personNum, hot, startTime, effective, releaseTime, info, needOrder, author } = this.props;
     const myType = this.getType(type);
     const favorClass = this.state.favor? 'icon-love-solid favor-active' : 'icon-love';
     return(
@@ -50,7 +50,7 @@ class Item extends Component{
             <i className="iconfont icon-next" />
           </section>
           <section className="activity-item-option">
-            <i className="iconfont icon-fire activity-icon-hot" />
+            { hot == 1 && <i className="iconfont icon-fire activity-icon-hot" />}
             { needOrder == 1 && <i className="activity-icon-order" /> }
             <i className={`iconfont activity-icon-favor ${favorClass}`} onClick={this.addLike} />
             <section className="activity-item-subinfo"><b>{personNum}</b>人</section>

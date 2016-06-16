@@ -58,7 +58,7 @@ export default class User extends Component{
 	}
 
 	render() {
-		const { image, id, name, score } = USERINFO;
+		const { image, score } = USERINFO;
 		const { userName } = this.state;
 		return(
 			<div className="fullpage-gray">

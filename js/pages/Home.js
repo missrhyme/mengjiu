@@ -54,8 +54,8 @@ class HomeBox extends Component {
     const sliderStyle = {
       height: '145px'
     }
-    const { user, home, actions } = this.props;
-    const { page, type, title } = this.state;
+    const { home } = this.props;
+    const { type, title } = this.state;
     const sliders = home.sliders.map( item => {
       const func = item.actId ? () => location.hash = `/activity/${item.actId}` : () => window.open(item.link);
       return(
