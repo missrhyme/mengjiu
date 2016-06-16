@@ -3,6 +3,8 @@ import {
 	ACTIVITY_GET,
 	ACTIVITY_GET_NEXT,
 	ACTIVITY_DETAIL,
+	ACTIVITY_DETAIL_ADD_FAVOR,
+	ACTIVITY_DETAIL_REMOVE_FAVOR,
 } from '../constants/ActionTypes'
 import createPromiseThunk from '../utils/PromiseThunk'
 
@@ -33,6 +35,14 @@ export function getDetail(id) {
 
 export function getActivitiesNext(data){
 	return createPromiseThunk( ACTIVITY_GET_NEXT , () => api.getActivities(data) )
+}
+
+export function addDetailFavor(id){
+	return createPromiseThunk( ACTIVITY_DETAIL_ADD_FAVOR , () => api.addFavor(id, 'add') )
+}
+
+export function removeDetailFavor(id){
+	return createPromiseThunk( ACTIVITY_DETAIL_REMOVE_FAVOR , () => api.addFavor(id, 'remove') )
 }
 //
 // export function addQuickReply(msg, id) {

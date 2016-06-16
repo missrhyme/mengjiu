@@ -7,14 +7,8 @@ import Header from '../components/Header'
 import Slider from 'react-slick'
 
 import * as ActivityActions from '../actions/activity'
-import { addFavor } from '../api/activity'
 
 export default class Detail extends Component{
-
-  state = {
-    favorStatus : this.props.detail.isFavor ? 1 : 0
-  }
-
   constructor(props){
     super(props);
     this.disableFavor = false;
@@ -31,7 +25,7 @@ export default class Detail extends Component{
   }
 
 	render() {
-    const { images, title, author, time, location, tel, email, qq, detail } = this.props.detail;
+    const { images, title, author, time, location, tel, email, qq, detail, isFavor } = this.props.detail;
     const details = detail.split('\n').map((item, index) => <p key={index}>{item}</p>);
     const settings = {
       dots : true,
@@ -73,25 +67,16 @@ export default class Detail extends Component{
           <h3>活动简介</h3>
           {details}
         </section>
-        <button className="detail-collectButton" onClick={this.addFavor}>{this.buttonMsg[this.state.favorStatus]}</button>
+        <button className="detail-collectButton" onClick={this.addFavor}>{this.buttonMsg[isFavor]}</button>
       </div>
 		);
 	}
 
   addFavor(){
     const { id } = this.props.routeParams;
-    const { favorStatus } = this.state;
-    let action;
-    if( favorStatus == 2 ){
-      return;
-    }else{
-      action = favorStatus == 1 ? 'remove' : 'add';
-    }
-    this.setState({ favorStatus : 2 });
-    addFavor(id, action).then(
-      () => this.setState({ favorStatus : action == 'add' ? 1 : 0 }),
-      () => { console.log(r, 'error') }
-    )
+    const { isFavor } = this.props.detail;
+    const { addDetailFavor, removeDetailFavor } = this.props.actions;
+    isFavor? removeDetailFavor(id) : addDetailFavor(id);
   }
 }
 
