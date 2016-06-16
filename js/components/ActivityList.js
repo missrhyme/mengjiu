@@ -27,7 +27,14 @@ class Item extends Component{
   }
 
   state = {
-    favor : this.props.isFavor? true : false
+    favor : !!this.props.isFavor
+  }
+
+  componentWillReceiveProps(nextProps){
+    //同步收藏状态
+    this.setState({
+      favor : !!nextProps.isFavor
+    })
   }
 
   render(){

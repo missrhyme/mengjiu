@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 
@@ -27,16 +27,19 @@ class HomeBox extends Component {
     this.switchLocation = this.switchLocation.bind(this);
   }
 
+  static contextTypes = {
+    router: PropTypes.object
+  }
+
   state = {
     page : 0,
-    type : 1,
+    type : this.props.location.query.type || 1,
     location : locationList[0].id,
     title : locationList[0].title
   }
 
   componentWillMount(){
     this.getList();
-    //userLogin();
     this.props.homeActions.getSliders();
   }
 
@@ -127,7 +130,13 @@ class HomeBox extends Component {
     this.setState({
       type : type,
       page : 0
-    }, this.getList);
+    }, ()=>{
+      this.context.router.push({
+        pathname: '/',
+        query: { type: type }
+      });
+      this.getList();
+    });
   }
 
   switchLocation(item){

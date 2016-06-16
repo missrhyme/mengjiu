@@ -4,14 +4,13 @@
     text-align: center;
     display: -webkit-box;
     margin-bottom: 6px;
+    background: #fff;
 }
 
 .tab>a{
     display: block;
     -webkit-box-flex : 1;
     font-size: 1.4rem;
-    /*padding:0 18px;
-    margin:0 25px;*/
     height:40px;
     line-height: 40px;
     border-bottom: 1px solid #e8e8e8;

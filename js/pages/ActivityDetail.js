@@ -32,7 +32,7 @@ export default class Detail extends Component{
 
 	render() {
     const { images, title, author, time, location, tel, email, qq, detail } = this.props.detail;
-    const details = detail.split('\n').map(item => <p>{item}</p>);
+    const details = detail.split('\n').map((item, index) => <p key={index}>{item}</p>);
     const settings = {
       dots : true,
       infinite : true,
