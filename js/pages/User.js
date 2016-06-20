@@ -77,11 +77,11 @@ export default class User extends Component{
 					</section>
 				</HiddenLayer>
 
-				<section style={infoStyle} onClick={ ()=>this.setState({ active: true }) }>
+				<section style={infoStyle}>
 					<img src={image} width="60" height="60" style={imageStyle}/>
 					<p>昵称：{userName}</p>
 					<p>积分：{score}</p>
-					<i className="iconfont icon-next" style={iStyle}/>
+					{ false && <i className="iconfont icon-next" style={iStyle}/>}
 				</section>
 
         <BlockGroup>

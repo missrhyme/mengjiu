@@ -35,8 +35,10 @@ export default function user(state = initialState, action) {
       break;
     case ACTIVITY_DETAIL_ADD_FAVOR:
       return updateFavor(state, 1);
+      break;
     case ACTIVITY_DETAIL_REMOVE_FAVOR:
-      return updateFavor(state, 0);  
+      return updateFavor(state, 0);
+      break;  
     default:
       return state
   }

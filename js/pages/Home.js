@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react'
+ import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 
@@ -23,6 +23,7 @@ class HomeBox extends Component {
     super(props);
     this.getList = this.getList.bind(this);
     this.getNextList = this.getNextList.bind(this);
+    this.collectShells = this.collectShells.bind(this);
     this.switchTab = this.switchTab.bind(this);
     this.switchLocation = this.switchLocation.bind(this);
   }
@@ -33,9 +34,7 @@ class HomeBox extends Component {
 
   state = {
     page : 0,
-    type : this.props.location.query.type || 1,
-    location : locationList[0].id,
-    title : locationList[0].title
+    type : this.props.location.query.type || 1
   }
 
   componentWillMount(){
@@ -55,7 +54,8 @@ class HomeBox extends Component {
       height: '145px'
     }
     const { home } = this.props;
-    const { type, title } = this.state;
+    const { title } = this.props.activity.campus;
+    const { type } = this.state;
     const sliders = home.sliders.map( item => {
       const func = item.actId ? () => location.hash = `/activity/${item.actId}` : () => window.open(item.link);
       return(
@@ -100,7 +100,7 @@ class HomeBox extends Component {
         {this.props.activity.activity.length == 10 * (this.state.page + 1) &&
           <ScrollFetch
             handle  ={ ()=> this.getNextList() }
-            callback={ ()=>this.setState({page : this.state.page + 1}) }
+            callback={ ()=> this.setState({page: this.state.page + 1}) }
           />
         }
 
@@ -110,20 +110,23 @@ class HomeBox extends Component {
     )
   }
 
-  getNextList(){
-      return this.props.activityActions.getActivitiesNext({
-        type : this.state.type,
-        p : this.state.page,
-        campus : this.state.location
-      });
+  collectShells(obj){
+    let defaultObj = {
+      type  : this.state.type,
+      p     : this.state.page,
+      campus: this.props.activity.campus.id
+    }
+    return $.extend({}, defaultObj, obj);
   }
 
-  getList(){
-    return this.props.activityActions.getActivities({
-      type : this.state.type,
-      p : this.state.page,
-      campus : this.state.location
-    });
+  getNextList(){
+    const query = this.collectShells(params);
+    return this.props.activityActions.getActivitiesNext(query);
+  }
+
+  getList(params){
+    const query = this.collectShells(params);
+    return this.props.activityActions.getActivities(query);
   }
 
   switchTab(type){
@@ -140,10 +143,9 @@ class HomeBox extends Component {
   }
 
   switchLocation(item){
-    this.setState({
-      location : item.id,
-      title : item.title
-    }, this.getList)
+    const { updateCampus } = this.props.activityActions;
+    updateCampus(item);
+    this.getList({ campus: item.id });
   }
 
 }

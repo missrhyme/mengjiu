@@ -5,5 +5,5 @@ import {
 import createPromiseThunk from '../utils/PromiseThunk'
 
 export function getSliders() {
-	return createPromiseThunk( HOME_SLIDER_GET , () => api.getSliders() )
+	return createPromiseThunk( HOME_SLIDER_GET , ()=>api.getSliders() )
 }
