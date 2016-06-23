@@ -25,6 +25,7 @@ class HomeBox extends Component {
     this.getNextList = this.getNextList.bind(this);
     this.collectShells = this.collectShells.bind(this);
     this.switchTab = this.switchTab.bind(this);
+    this.switchExpired = this.switchExpired.bind(this);
     this.switchLocation = this.switchLocation.bind(this);
   }
 
@@ -34,7 +35,8 @@ class HomeBox extends Component {
 
   state = {
     page : 0,
-    type : this.props.location.query.type || 1
+    expired: false, //活动是否过期
+    type : this.props.location.query.type || 1 //1为校园活动 2为企业直通
   }
 
   componentWillMount(){
@@ -67,7 +69,7 @@ class HomeBox extends Component {
     const tags = tag[type].map( item=><Tag {...item} key={item.title} /> );
     const location = locationList.map( item=><OptionItem key={item.id} onClick={ ()=>this.switchLocation(item) }>{item.title}</OptionItem> );
     return (
-      <div style={{overflowX:'hidden', paddingBottom: '50px', background:'#f4f4f4', overflowY: 'scroll'}}>
+      <div style={{overflowX:'hidden', paddingBottom: '50px', background:'#f4f4f4', overflowY: 'scroll', minHeight: '100%'}}>
 
         <HeaderBox hasReturn={false} >
           <h1>{title}</h1>
@@ -94,7 +96,10 @@ class HomeBox extends Component {
         </Slider>
 
         <TagGroup>{tags}</TagGroup>
-        <section className="home-seg">近期推荐</section>
+        <section className="tab sub">
+          <a className={!this.state.expired? 'current' : ''} onClick={ ()=>this.switchExpired(false) }>近期推荐</a>
+          <a className={this.state.expired? 'current' : ''} onClick={ ()=>this.switchExpired(true) }>过期活动</a>
+        </section>
         <List data={this.props.activity.activity} />
 
         {this.props.activity.activity.length == 10 * (this.state.page + 1) &&
@@ -126,7 +131,11 @@ class HomeBox extends Component {
 
   getList(params){
     const query = this.collectShells(params);
-    return this.props.activityActions.getActivities(query);
+    return (
+      this.state.expired ?
+      this.props.activityActions.getExpiredActivities(query) :
+      this.props.activityActions.getActivities(query)
+    )
   }
 
   switchTab(type){
@@ -140,6 +149,13 @@ class HomeBox extends Component {
       });
       this.getList();
     });
+  }
+
+  switchExpired(isExpired){
+    this.setState({
+      expired : isExpired,
+      page    : 0
+    }, this.getList)
   }
 
   switchLocation(item){

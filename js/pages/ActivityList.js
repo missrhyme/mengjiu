@@ -53,6 +53,7 @@ export default class ActivityList extends Component{
 						onClick={ ()=> this.filterActivity(2) }
 					>按热度</a>
         </section>
+
 				<List data={this.props.activity.activity} />
 
 				{this.props.activity.activity.length == 10 * (this.state.page + 1) &&
@@ -75,13 +76,13 @@ export default class ActivityList extends Component{
 			subtype : subtype,
 			sort : sort,
 			page : page + 1,
-			campus : id		
+			campus : id
 		}
 		return $.extend({}, defaultQuery, query);
 	}
 
 	filterActivity(sort){
-		const obj = { 
+		const obj = {
 			sort : sort,
 			page : 0
 		};

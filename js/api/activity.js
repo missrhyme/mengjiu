@@ -8,6 +8,14 @@ export function getActivities(data){
 	})
 }
 
+//获取过期活动列表
+export function getExpiredActivities(data){
+	return fetch({
+		url : '/api/activity/GetExpiredActivities',
+		data: data
+	})
+}
+
 //活动单页
 export function getDetail(id){
 	return fetch({

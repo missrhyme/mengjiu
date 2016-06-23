@@ -1,6 +1,3 @@
-.taglist{
-  margin-top: 8px;
-}
 .taglist li{
   width: calc( 33.333% - 5px );
   display: inline-block;

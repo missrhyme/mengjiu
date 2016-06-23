@@ -31,6 +31,11 @@ export function getActivities(data) {
 	return createPromiseThunk( ACTIVITY_GET , ()=>api.getActivities(data) )
 }
 
+//获取过期活动列表
+export function getExpiredActivities(data) {
+	return createPromiseThunk( ACTIVITY_GET , ()=>api.getExpiredActivities(data) )
+}
+
 //获取活动详情
 export function getDetail(id) {
 	return createPromiseThunk( ACTIVITY_DETAIL , ()=>api.getDetail(id) )

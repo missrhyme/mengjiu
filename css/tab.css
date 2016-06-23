@@ -1,22 +1,32 @@
 .tab{
-    height:40px;
-    border-bottom: 1px solid #e8e8e8;
-    text-align: center;
-    display: -webkit-box;
-    margin-bottom: 6px;
-    background: #fff;
+  height:40px;
+  border-bottom: 1px solid #e8e8e8;
+  text-align: center;
+  display: -webkit-box;
+  margin-bottom: 6px;
+  background: #fff;
 }
 
 .tab>a{
-    display: block;
-    -webkit-box-flex : 1;
-    font-size: 1.4rem;
-    height:40px;
-    line-height: 40px;
-    border-bottom: 1px solid #e8e8e8;
+  display: block;
+  -webkit-box-flex : 1;
+  font-size: 1.4rem;
+  height:40px;
+  line-height: 40px;
+  border-bottom: 1px solid #e8e8e8;
 }
 
 .tab>a.current{
-    color:#007DFF;
-    border-bottom: 1px solid #007DFF;
+  color:#007DFF;
+  border-bottom: 1px solid #007DFF;
+}
+
+.tab.sub{
+  height: 30px;
+  margin-top: 5px;
+}
+.tab.sub>a{
+  height: 30px;
+  line-height: 30px;
+  font-size: 1.2rem;
 }
