@@ -7,7 +7,8 @@ import {
 const initialState = {
     title: '',
     images: [],
-    time : 0,
+    startTime : 0,
+		endTime : 0,
     location : '',
     view : 0,
     like : 0,
@@ -38,7 +39,7 @@ export default function user(state = initialState, action) {
       break;
     case ACTIVITY_DETAIL_REMOVE_FAVOR:
       return updateFavor(state, 0);
-      break;  
+      break;
     default:
       return state
   }

@@ -25,7 +25,7 @@ export default class Detail extends Component{
   }
 
 	render() {
-    const { images, title, author, time, location, tel, email, qq, detail, isFavor } = this.props.detail;
+    const { images, title, author, startTime, endTime, location, tel, email, qq, detail, isFavor } = this.props.detail;
     const details = detail.split('\n').map((item, index) => <p key={index}>{item}</p>);
     const settings = {
       dots : true,
@@ -55,7 +55,7 @@ export default class Detail extends Component{
           <p>{author}</p>
         </section>
         <section className="detail-info">
-          <p><i className="iconfont icon-time" />{ moment(time).format('YYYY/MM/DD HH:mm') }</p>
+          <p><i className="iconfont icon-time" />{moment(startTime).format('YYYY/MM/DD HH:mm')} - {moment(endTime).format('YYYY/MM/DD HH:mm')}</p>
           <p><i className="iconfont icon-location-solid" />{location}</p>
         </section>
         <section className="detail-info">
