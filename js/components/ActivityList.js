@@ -24,6 +24,7 @@ class Item extends Component{
     this.getType = this.getType.bind(this);
     this.addLike = this.addLike.bind(this);
     this.getTypeBlock = this.getTypeBlock.bind(this);
+    this.getTimeString = this.getTimeString.bind(this);
   }
 
   state = {
@@ -38,7 +39,7 @@ class Item extends Component{
   }
 
   render(){
-    const { id, title, type, location, personNum, hot, startTime, effective, releaseTime, info, needOrder, author } = this.props;
+    const { id, title, type, location, personNum, hot, startTime, endTime, effective, releaseTime, info, needOrder, author } = this.props;
     const myType = this.getType(type);
     const favorClass = this.state.favor? 'icon-love-solid favor-active' : 'icon-love';
     return(
@@ -55,7 +56,7 @@ class Item extends Component{
             <i className={`iconfont activity-icon-favor ${favorClass}`} onClick={this.addLike} />
             <section className="activity-item-subinfo"><b>{personNum}</b>人</section>
             { myType == 'activity' && <p><i className="iconfont icon-people"/>{author}</p> }
-            { myType == 'activity' && <p><i className="iconfont icon-time" />{moment(startTime).format('YYYY/MM/DD HH:mm')}</p> }
+            { myType == 'activity' && <p><i className="iconfont icon-time" />{this.getTimeString()}</p> }
             { myType == 'job' && <p><i className="iconfont icon-time" />{`${effective}有效 ${releaseTime}更新`}</p> }
             { myType == 'job' && <p><i className="iconfont icon-tag" />{info}</p> }
             <p><i className="iconfont icon-location" />{location}</p>
@@ -101,5 +102,14 @@ class Item extends Component{
         () => this.setState({favor : !this.state.favor}),
         r => console.log(r)
       )
+  }
+
+  getTimeString(){
+    const { startTime, endTime } = this.props;
+    if( moment(startTime).format('YYYY/MM/DD') == moment(endTime).format('YYYY/MM/DD') ){
+      return `${moment(startTime).format('YYYY/MM/DD HH:mm')} - ${moment(endTime).format('HH:mm')}`
+    }else{
+      return `${moment(startTime).format('YYYY/MM/DD HH:mm')} - ${moment(endTime).format('YYYY/MM/DD HH:mm')}`
+    }
   }
 }

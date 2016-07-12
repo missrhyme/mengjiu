@@ -59,7 +59,9 @@ class HomeBox extends Component {
     const { title } = this.props.activity.campus;
     const { type } = this.state;
     const sliders = home.sliders.map( item => {
-      const func = item.actId ? () => location.hash = `/activity/${item.actId}` : () => window.open(item.link);
+      const func = item.actId ? 
+        () => this.context.router.push(`/activity/${item.actId}`) : 
+        () => window.location.href = item.link;
       return(
         <div style={sliderStyle} key={item.title} onClick={func}>
           <img src={item.imagePath} alt={item.title} height="145" width="100%"/>
